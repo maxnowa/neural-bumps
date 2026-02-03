@@ -1,0 +1,53 @@
+# Neural Field Simulation - Default Configuration
+# Override values programmatically or via custom config files
+
+simulation:
+  mode: full  # full | simplified
+  ring_mode: dual  # single | dual
+
+grid:
+  L: 180.0  # Half-domain size (degrees)
+  dx: 0.05  # Spatial resolution (degrees)
+
+time:
+  dt: 0.01  # Time step (ms)
+  tau: 1.0  # Time constant (ms)
+  T_total: 1000.0  # Total simulation time (ms)
+  eps: 0.05  # Noise strength (epsilon)
+
+# Lateral kernel parameters (triple_gaussian default)
+lateral_kernel:
+  type: mexican_hat  # triple_gaussian | mexican_hat | kilpatrick | quad_exp
+  # Triple gaussian parameters
+  A_ex: 2.2
+  sig_ex: 4.0
+  A_inh: 1.4
+  sig_inh: 19.0
+  A_attr: 0.05
+  sig_attr: 40.0
+  # Kilpatrick parameter
+  A: 1.0
+  # Quad exp parameters
+  sig_custom: 20.0
+  A_custom: 1.0
+  rise_power: 2.0
+  decay_power: 1.0
+
+# Cross-ring kernel parameters
+cross_kernel:
+  type: gaussian  # gaussian | tent | quad_exp | double_bump | mexican_hat
+  J_cross: 1.2
+  sig_cross: 40.0
+
+# Input parameters
+input:
+  amp_target: 1.0
+  amp_dist: 1.0
+  width_input: 5.0
+  theta: 0.25  # Activation threshold
+
+# Bump physics (optional pre-calculated values)
+physics:
+  m1: 1  # Mass coefficient for bump 1
+  m2: 1  # Mass coefficient for bump 2
+  stable_width: null  # Pre-calculated stable width (if known)
