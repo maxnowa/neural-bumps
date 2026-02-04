@@ -21,7 +21,6 @@ In experiments, when subjects must remember a target location while ignoring a d
 - **Stability analysis**: Automatically check whether a kernel supports stable bumps
 - **Parameter search**: Monte Carlo exploration of kernel parameter space
 - **Visualization suite**: Kernel profiles, space-time diagrams, trajectory plots, bias curves
-- **Reproducible research**: Replicates results from Kilpatrick & Ermentrout (2018)
 
 ## Installation
 
@@ -163,7 +162,7 @@ result = simulator.run_trial(
 t=0        t=200      t=700                      t=T_total
 |----------|==========|--------------------------|
 |  Target  | Target + |  Target only             |
-|  only    | Distractor|  (distractor removed)   |
+|  only    |Distractor|  (distractor removed)    |
 |----------|==========|--------------------------|
            ↑          ↑
       dist_onset   dist_onset + dist_dur
@@ -279,12 +278,7 @@ neural-bumps/
 │   ├── visualization/      # Plotting functions
 │   └── io/                 # Data I/O utilities
 ├── notebooks/              # Jupyter notebooks with examples
-├── data/                   # Pre-computed results
-│   ├── stable_params.csv   # 50k stable kernel configurations
-│   ├── candidates.csv      # Filtered kernels with velocity profiles
-│   └── verified_bias_curves.csv
-├── config/                 # Default YAML configuration
-└── code/                   # Legacy API (backwards compatibility)
+└── config/                 # Default YAML configuration
 ```
 
 ## Working with Results
@@ -311,6 +305,16 @@ See `notebooks/neural_field.ipynb` for comprehensive examples including:
 - Large-scale kernel parameter optimization
 - Designing cross-ring coupling for specific bias patterns
 
-## License
+## License 
 
-MIT License - see LICENSE file for details.
+This software is licensed under the [MIT License](LICENSE).
+
+## Citation 
+
+For information on how to cite this software please refer to the [citation file](CITATION.cff).
+
+## Contact 
+
+For any inquiries please contact the author at:
+
+max.nowaczyk@bccn-berlin.de
