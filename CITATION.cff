@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: Neural Field Simulation Framework
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Nowaczyk
+    given-names: Max
+    affiliation: Bernstein Center for Computational Neuroscience (BCCN) Berlin
+repository-code: https://github.com/maxnowa/neural-bumps
+license: MIT
+version: 0.1.0
+keywords:
+  - neural-field
+  - working-memory
+  - computational-neuroscience
+  - attention
+  - bump-attractor
+  - simulation
+abstract: >-
+  A Python framework for simulating neural field dynamics on ring topologies,
+  designed to study attentional interactions in working memory. Models how
+  localized patterns of neural activity (bumps) interact when multiple stimuli
+  compete for representation, enabling investigation of attraction and repulsion
+  biases observed in behavioral experiments.
