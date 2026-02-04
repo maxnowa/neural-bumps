@@ -104,8 +104,6 @@ class SimplifiedSimulator:
                 pos_1 = wrap_deg(pos_1 + drift_1 * p.dt + diff)
 
             if not np.isnan(pos_2):
-                # Note: If pos_2 is clamped to dist_loc, you may not want to update it
-                # depending on your experimental paradigm
                 diff = noise_mag * np.random.normal()
                 pos_2 = wrap_deg(pos_2 + drift_2 * p.dt + diff)
 
